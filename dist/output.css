@@ -1836,3 +1836,17 @@ video {
     padding-right: 6rem;
   }
 }
+
+
+
+
+/* ================================== sidebar ======================= */
+.button-hover{
+  background: #168EEA;
+  color: white;
+}
+
+.button-hover>svg{
+  color: #fff;
+}
+/* ================================== End sidebar ======================= */
