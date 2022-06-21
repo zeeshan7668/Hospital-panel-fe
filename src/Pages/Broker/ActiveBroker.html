@@ -57,7 +57,6 @@
       </div>
     </header>
     <div class="flex">
-      <!-- SideBar -->
       <div
         class="flex flex-col flex-grow border-r border-gray-200 pt-5 pb-4 bg-white overflow-y-auto w-1/6"
       >
@@ -88,15 +87,17 @@
             </div>
 
             <div class="space-y-1">
+              <!-- Current: "bg-gray-100 text-gray-600", Default: "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-600" -->
               <button
                 type="button"
-                class="bg-white text-gray-600 hover:bg-[#168EEA] hover:text-white group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-r-md focus:outline-none button-hover"
+                class="bg-white text-gray-600 hover:bg-[#168EEA] hover:text-white group w-full flex items-center pl-2 pr-1 py-2 text-left text-sm font-medium rounded-r-md focus:outline-none"
                 aria-controls="sub-menu-1"
                 aria-expanded="false"
                 onclick="showSideBar('sub-menu-1')"
               >
+                <!-- Heroicon name: outline/users -->
                 <svg
-                  class="mr-3 flex-shrink-0 h-6 w-6 text-gray-600 group-hover:text-white"
+                  class="mr-3 flex-shrink-0 h-6 w-6 text-gray-600 group-hover:text-gray-500"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -111,35 +112,51 @@
                   />
                 </svg>
                 <span class="flex-1"> Team </span>
+                <!-- Expanded: "text-gray-400 rotate-90", Collapsed: "text-gray-300" -->
                 <svg
-                  class="text-gray-600 ml-3 flex-shrink-0 h-5 w-5 transform group-hover:white transition-colors ease-in-out duration-150"
+                  class="text-gray-600 ml-3 flex-shrink-0 h-5 w-5 transform group-hover:text-gray-600 transition-colors ease-in-out duration-150"
                   viewBox="0 0 20 20"
                   aria-hidden="true"
                 >
                   <path d="M6 6L14 10L6 14V6Z" fill="currentColor" />
                 </svg>
               </button>
+              <!-- Expandable link section, show/hide based on state. -->
               <div class="space-y-1 hidden" id="sub-menu-1">
                 <a
                   href="#"
-                  class="group w-full flex items-center pl-11 pr-2 text-sm font-medium text-[#168EEA] hover:text-[#168EEA]"
+                  class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-600 hover:bg-gray-50"
                 >
-                  Active Brokers
+                  Overview
                 </a>
+
                 <a
                   href="#"
-                  class="group w-full flex items-center pl-11 pr-2 text-sm font-medium text-gray-600 hover:text-[#168EEA]"
+                  class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-600 hover:bg-gray-50"
                 >
-                  Pending Brokers
+                  Members
+                </a>
+
+                <a
+                  href="#"
+                  class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-600 hover:bg-gray-50"
+                >
+                  Calendar
+                </a>
+
+                <a
+                  href="#"
+                  class="group w-full flex items-center pl-11 pr-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-600 hover:bg-gray-50"
+                >
+                  Settings
                 </a>
               </div>
             </div>
           </nav>
         </div>
       </div>
-      <!--End SideBar -->
       <div class="bg-gray-100 w-5/6 px-4 py-8">
-        <p class="text-[#168EEA] font-semibold text-2xl pb-4">Active Brokers</p>
+        <p class="text-[#168EEA] bold text-2xl pb-4">Active Brokers</p>
         <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md">
           <div class="sm:flex sm:items-center border-b py-8">
             <div class="sm:flex-auto">
@@ -159,7 +176,7 @@
                 <select
                   id="message-type"
                   name="message-type"
-                  class="-ml-px block w-full pl-3 pr-9 py-1.5 rounded-l-none rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-gray-900 focus:border-gray-900"
+                  class="-ml-px block w-full pl-3 pr-9 py-1.5 rounded-l-none rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                 >
                   <option>All</option>
                 </select>
@@ -187,7 +204,6 @@
               />
             </div>
           </div>
-          <!-- Table -->
           <div class="mt-8 flex flex-col">
             <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div class="inline-block min-w-full py-2 align-middle">
@@ -627,6 +643,8 @@
                           </div>
                         </td>
                       </tr>
+
+                      <!-- More people... -->
                     </tbody>
                   </table>
                 </div>
@@ -635,7 +653,7 @@
           </div>
           <!-- Pagination -->
           <div
-            class="bg-white py-1 flex items-center justify-between border-t border-gray-200"
+            class="bg-white py-3 flex items-center justify-between border-t border-gray-200"
           >
             <div class="flex-1 flex items-center justify-between w-full">
               <div>
@@ -648,7 +666,7 @@
               </div>
               <div>
                 <nav
-                  class="relative z-0 inline-flex space-x-2 py-4"
+                  class="relative z-0 inline-flex rounded-md shadow-sm space-x-2 py-4"
                   aria-label="Pagination"
                 >
                   <a
@@ -656,6 +674,7 @@
                     class="rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                   >
                     <span class="sr-only">Previous</span>
+                    <!-- Heroicon name: solid/chevron-left -->
                     <svg
                       class="h-5 w-5"
                       xmlns="http://www.w3.org/2000/svg"
@@ -670,10 +689,11 @@
                       />
                     </svg>
                   </a>
+                  <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
                   <a
                     href="#"
                     aria-current="page"
-                    class="rounded-full z-10 bg-indigo-500 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                    class="rounded-full z-10 bg-[#168EEA] border-[#168EEA] text-white relative inline-flex items-center px-4 py-2 border text-sm font-medium"
                   >
                     1
                   </a>
@@ -717,6 +737,7 @@
                     class="rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                   >
                     <span class="sr-only">Next</span>
+                    <!-- Heroicon name: solid/chevron-right -->
                     <svg
                       class="h-5 w-5"
                       xmlns="http://www.w3.org/2000/svg"
