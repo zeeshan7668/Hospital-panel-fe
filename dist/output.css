@@ -1912,6 +1912,7 @@ ul.sidebar-menu {
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
+
 li.have-children ul {
   padding: 0px;
 }
@@ -1930,6 +1931,28 @@ li.have-children,
 li {
   position: relative;
 }
+.have-children span::before {
+  color: #707070;
+}
+.have-children span:hover::before {
+  color: white;
+}
+.have-children:hover a span::before,
+.have-children:hover a span::after{
+  color: white;
+}
+
+/* .active span::before {
+  color: white;
+}
+.active a span::before,
+.active a span::after{
+  color: white;
+} */
+
+li:hover a span::before{
+  color: white;
+}
 .have-children span::after {
   position: absolute;
   right: 30px;
@@ -1937,6 +1960,10 @@ li {
   color: #707070;
   transition: all 0.5s;
 }
+.have-children span:hover::after {
+  color: white;
+}
+
 li.active.have-children span::after {
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
