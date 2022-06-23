@@ -1883,95 +1883,119 @@ video {
 }
 
 /* ================================== sidebar ======================= */
-ul.sidebar-menu {
+p{
+  margin-bottom: 0!important;
+}
+.height-custom{
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+.aside {
+  background-color: white;
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 46px;
+  /* width: 300px; */
+  box-shadow: 3px 3px 6px #00000029;
+}
+
+.navContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.navContainer::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #949292;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  flex: 1;
+  padding-top: 46px;
+}
+
+.navContainer .nav__ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  max-width: 400px;
-  list-style: none;
-  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
 }
-.sidebar-menu li a span {
-  margin-right: 20px;
+
+.navContainer .nav__li {
+  display: flex;
+  flex-direction: column;
+}
+
+.navContainer .nav__a:link,
+.navContainer .nav__a:visited {
   color: #707070;
-}
-.sidebar-menu li a {
-  background-color: #fff;
-  padding: 10px 25px;
-  display: block;
-  text-decoration: none;
-  color: #4d5158;
-  margin-right: 1rem;
-}
-.sidebar-menu li a:hover {
-  background-color: #168eea;
-  padding: 10px 25px;
-  margin-right: 1rem;
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 0 0.5rem 0.5rem 0;
-}
-
-
-li.have-children ul {
-  padding: 0px;
-}
-li.have-children ul li a {
-  /* background-color: #3c3636; */
-  padding-left: 62px;
-  font: weight 400;
-}
-li.have-children ul li a:hover {
-  color: #168eea;
-  background-color: white;
-  padding-left: 62px;
-  font-weight: 400;
-}
-li.have-children,
-li {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 18px;
+  border-radius: 0px 10px 10px 0px;
+  min-height: 50px !important;
+  margin-right: 15px;
+  padding-right: 15px;
   position: relative;
-}
-.have-children span::before {
-  color: #707070;
-}
-.have-children span:hover::before {
-  color: white;
-}
-.have-children:hover a span::before,
-.have-children:hover a span::after{
-  color: white;
+  text-decoration: none;
 }
 
-/* .active span::before {
-  color: white;
-}
-.active a span::before,
-.active a span::after{
-  color: white;
-} */
-
-li:hover a span::before{
-  color: white;
-}
-.have-children span::after {
-  position: absolute;
-  right: 30px;
-  content: "\f054";
-  color: #707070;
-  transition: all 0.5s;
-}
-.have-children span:hover::after {
-  color: white;
+.navContainer .nav__a::after {
+  content: '';
+  border-left: 0.3em solid currentColor;
+  border-right: 0.3em solid transparent;
+  border-top: 0.3em solid transparent;
+  border-bottom: 0.3em solid transparent;
+  display: flex;
+  margin-left: auto;
+  transition: transform 0.3s;
+  margin-top: 5px;
 }
 
-li.active.have-children span::after {
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
+.navContainer .noCollapse::after {
+  display: none !important;
+}
+
+.navContainer .nav__a:not(.collapsed)::after {
   transform: rotate(90deg);
 }
 
-.sidebar-menu .have-children > ul {
-  display: none;
+.navContainer .nav__li:not(:last-child) .nav__a {
+  margin-bottom: 2px;
+}
+
+.navContainer .nav__a:hover,
+.navContainer .nav__a:active,
+.navContainer.active {
+  background-color: #168eea;
+  color: #fff;
+}
+
+.navContainer .nav__a svg path {
+  fill: #707070;
+}
+.navContainer .nav__a:hover svg path {
+  fill: white;
+}
+.navContainer .nav__a .nav__a__text {
+  margin-left: 22px;
+}
+
+.navContainer .nav__a .nav__a__icon {
+  min-width: 20px;
+  max-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* ================================== End sidebar ======================= */
