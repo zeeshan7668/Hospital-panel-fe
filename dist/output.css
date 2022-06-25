@@ -1976,13 +1976,26 @@ p{
 
 .navContainer .nav__a:hover,
 .navContainer .nav__a:active,
-.navContainer.active {
+.navContainer .active {
+  background-color: #168eea;
+  color: #fff;
+}
+.navContainerActive .nav__a, .navContainerActive .nav__a:active, .navContainerActive .active {
   background-color: #168eea;
   color: #fff;
 }
 
 .navContainer .nav__a svg path {
   fill: #707070;
+}
+.navContainerActive .nav__a svg path {
+  fill: white;
+}
+.navContainerActive .nav__a span {
+  color: white;
+}
+.navContainerActive .nav__a::after {
+  color: white;
 }
 .navContainer .nav__a:hover svg path {
   fill: white;
@@ -1997,5 +2010,21 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.sub-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+.sub-menu a{
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sub-menu .active-sb-tab{
+  color: #168eea;
 }
 /* ================================== End sidebar ======================= */

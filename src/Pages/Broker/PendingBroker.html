@@ -75,10 +75,10 @@
         class="flex flex-col flex-grow border-r border-gray-200 pb-4 bg-white overflow-y-auto w-[20%]"
       >
       <aside class="aside">
-        <nav class="navContainer">
+        <nav class="navContainer ">
           <ul class="nav__ul">
-            <li class="nav__li">
-              <a class="nav__a collapsed noCollapse" href="#">
+            <li class="nav__li  ">
+              <a class="nav__a collapsed noCollapse" href="../Dashboard/Dashboard.html">
                 <span class="nav__a__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -96,9 +96,9 @@
                 <span class="nav__a__text">Dashboard</span>
               </a>
             </li>
-            <li class="nav__li">
+            <li class="nav__li navContainerActive">
               <a
-                class="nav__a collapsed"
+                class="nav__a collapsed active-tab"
                 data-bs-toggle="collapse"
                 href="#brokersCollapse"
                 role="button"
@@ -124,9 +124,9 @@
                 <span class="nav__a__text">Brokers</span>
               </a>
               <div class="collapse" id="brokersCollapse">
-                <div class="card card-body">
-                  <a href="">Active Broker</a>
-                  <a href="">Pending Broker</a>
+                <div class="sub-menu">
+                  <a href="ActiveBroker.html">Active Broker</a>
+                  <a href="PendingBroker.html" class="active-sb-tab">Pending Broker</a>
                 </div>
               </div>
             </li>
@@ -158,10 +158,9 @@
                 <span class="nav__a__text">Providers</span>
               </a>
               <div class="collapse" id="providersCollapse">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                <div class="sub-menu">
+                  <a href="../Provider/ActiveProvider.html">Active Providers</a>
+                  <a href="../Provider/PendingProvider.html">Pending Providers</a>
                 </div>
               </div>
             </li>
@@ -193,10 +192,9 @@
                 <span class="nav__a__text">Drivers</span>
               </a>
               <div class="collapse" id="driversCollapse">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                <div class="sub-menu">
+                  <a href="../Driver/ActiveDriver.html">Active Drivers</a>
+                  <a href="../Driver/PendingDriver.html">Pending Drivers</a>
                 </div>
               </div>
             </li>
@@ -229,10 +227,9 @@
                 <span class="nav__a__text">Patients</span>
               </a>
               <div class="collapse" id="patientCollapse">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                <div class="sub-menu">
+                  <a href="../Patient/ActivePatient.html">Active Patients</a>
+                  <a href="../Patient/PendingPatient.html">Pending Patients</a>
                 </div>
               </div>
             </li>
@@ -264,10 +261,9 @@
                 <span class="nav__a__text">Trips</span>
               </a>
               <div class="collapse" id="tripsCollapse">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                <div class="sub-menu">
+                  <a href="../Trip/ActiveTrip.html">Active Trips</a>
+                  <a href="../Trip/PendingTrip.html">Pending Trips</a>
                 </div>
               </div>
             </li>
@@ -300,15 +296,14 @@
                 <span class="nav__a__text">Vehicles</span>
               </a>
               <div class="collapse" id="vehiclesCollapse">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                <div class="sub-menu">
+                  <a href="../Vehicle/ApprovedVehicle.html">Approved Vehicles</a>
+                  <a href="../Vehicle/PendingVehicle.html">Pending Vehicles</a>
                 </div>
               </div>
             </li>
             <li class="nav__li">
-              <a class="nav__a collapsed noCollapse" href="#">
+              <a class="nav__a collapsed noCollapse" href="../Hospital/Hospital.html">
                 <span class="nav__a__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -328,7 +323,7 @@
               </a>
             </li>
             <li class="nav__li">
-              <a class="nav__a collapsed noCollapse" href="#">
+              <a class="nav__a collapsed noCollapse" href="../Country/Country.html">
                 <span class="nav__a__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -375,10 +370,9 @@
                 <span class="nav__a__text">Subscriptions</span>
               </a>
               <div class="collapse" id="subscriptionsCollapse">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                <div class="sub-menu">
+                  <a href="../Subscription/ActiveSubscription.html">Active Subscriptions</a>
+                  <a href="../Subscription/ExpiedSubscription.html">Expired Subscriptions</a>
                 </div>
               </div>
             </li>
@@ -409,10 +403,9 @@
                 <span class="nav__a__text">Packages</span>
               </a>
               <div class="collapse" id="packagesCollapse">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                <div class="sub-menu">
+                  <a href="../Packege/AllPackege.html">All Packages</a>
+                  <a href="../Packege/CreatePackege.html">Create Packages</a>
                 </div>
               </div>
             </li>
@@ -444,10 +437,8 @@
                 <span class="nav__a__text">Settings</span>
               </a>
               <div class="collapse" id="settingsCollapse">
-                <div class="card card-body">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                <div class="sub-menu">
+                  <a href="../Setting/Sessting.html">Active Settings</a>
                 </div>
               </div>
             </li>
@@ -954,7 +945,7 @@
           </div>
           <!-- Pagination -->
           <div
-            class="bg-white py-3 flex items-center justify-between border-t border-gray-200"
+            class="bg-white py-3 flex items-center justify-between"
           >
             <div class="flex-1 flex items-center justify-between w-full">
               <div>
@@ -967,12 +958,12 @@
               </div>
               <div>
                 <nav
-                  class="relative z-0 inline-flex rounded-md shadow-sm space-x-2 py-4"
+                  class="relative z-0 inline-flex rounded-md space-x-2 py-1"
                   aria-label="Pagination"
                 >
                   <a
                     href="#"
-                    class="rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                    class=" rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                   >
                     <span class="sr-only">Previous</span>
                     <!-- Heroicon name: solid/chevron-left -->
@@ -994,48 +985,48 @@
                   <a
                     href="#"
                     aria-current="page"
-                    class="rounded-full z-10 bg-[#168EEA] border-[#168EEA] text-white relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                    class="rounded-full z-10 bg-[#168EEA] border-[#168EEA] text-white relative inline-flex items-center px-3 py-1 border text-sm font-medium"
                   >
                     1
                   </a>
                   <a
                     href="#"
-                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
                   >
                     2
                   </a>
                   <a
                     href="#"
-                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
+                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-3 py-1 border text-sm font-medium"
                   >
                     3
                   </a>
                   <span
-                    class="rounded-full relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700"
+                    class=" rounded-full relative inline-flex items-center px-3 py-1 border border-gray-300 bg-white text-sm font-medium text-gray-700"
                   >
                     ...
                   </span>
                   <a
                     href="#"
-                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
+                    class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-3 py-1 border text-sm font-medium"
                   >
                     8
                   </a>
                   <a
                     href="#"
-                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                    class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
                   >
                     9
                   </a>
                   <a
                     href="#"
-                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                    class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
                   >
                     10
                   </a>
                   <a
                     href="#"
-                    class="rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                    class=" rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                   >
                     <span class="sr-only">Next</span>
                     <!-- Heroicon name: solid/chevron-right -->

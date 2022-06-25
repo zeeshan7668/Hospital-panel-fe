@@ -96,7 +96,7 @@
                 <span class="nav__a__text">Dashboard</span>
               </a>
             </li>
-            <li class="nav__li navContainerActive">
+            <li class="nav__li">
               <a
                 class="nav__a collapsed active-tab"
                 data-bs-toggle="collapse"
@@ -125,12 +125,12 @@
               </a>
               <div class="collapse" id="brokersCollapse">
                 <div class="sub-menu">
-                  <a href="ActiveBroker.html" class="active-sb-tab">Active Broker</a>
-                  <a href="PendingBroker.html">Pending Broker</a>
+                  <a href="../Broker/ActiveBroker.html">Active Broker</a>
+                  <a href="../Broker/PendingBroker.html">Pending Broker</a>
                 </div>
               </div>
             </li>
-            <li class="nav__li">
+            <li class="nav__li ">
               <a
                 class="nav__a collapsed"
                 data-bs-toggle="collapse"
@@ -164,7 +164,7 @@
                 </div>
               </div>
             </li>
-            <li class="nav__li">
+            <li class="nav__li ">
               <a
                 class="nav__a collapsed"
                 data-bs-toggle="collapse"
@@ -193,12 +193,12 @@
               </a>
               <div class="collapse" id="driversCollapse">
                 <div class="sub-menu">
-                  <a href="../Driver/ActiveDriver.html">Active Drivers</a>
+                  <a href="../Driver/ActiveDriver.html" >Active Drivers</a>
                   <a href="../Driver/PendingDriver.html">Pending Drivers</a>
                 </div>
               </div>
             </li>
-            <li class="nav__li">
+            <li class="nav__li ">
               <a
                 class="nav__a collapsed"
                 data-bs-toggle="collapse"
@@ -228,8 +228,8 @@
               </a>
               <div class="collapse" id="patientCollapse">
                 <div class="sub-menu">
-                  <a href="../Patient/ActivePatient.html">Active Patients</a>
-                  <a href="../Patient/PendingPatient.html">Pending Patients</a>
+                  <a href="../Patient/ActivePatient.html" >Active Patients</a>
+                  <a href="../Patient/PendingPatient.html" >Pending Patients</a>
                 </div>
               </div>
             </li>
@@ -267,7 +267,7 @@
                 </div>
               </div>
             </li>
-            <li class="nav__li">
+            <li class="nav__li navContainerActive">
               <a
                 class="nav__a collapsed"
                 data-bs-toggle="collapse"
@@ -297,8 +297,8 @@
               </a>
               <div class="collapse" id="vehiclesCollapse">
                 <div class="sub-menu">
-                  <a href="../Vehicle/ApprovedVehicle.html">Approved Vehicles</a>
-                  <a href="../Vehicle/PendingVehicle.html">Pending Vehicles</a>
+                  <a href="ApprovedVehicle.html" >Approved Vehicles</a>
+                  <a href="PendingVehicle.html" class="active-sb-tab">Pending Vehicles</a>
                 </div>
               </div>
             </li>
@@ -448,7 +448,7 @@
       </div>
       <!-- End Side Bar -->
       <div class="bg-gray-100 w-[80%] px-4 py-8 height-custom">
-        <p class="text-[#168EEA] bold text-2xl pb-4">Active Brokers</p>
+        <p class="text-[#168EEA] bold text-2xl pb-4">Pending Vehicles</p>
         <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md">
           <div class="sm:flex sm:items-center border-b py-8">
             <div class="sm:flex-auto">
@@ -518,33 +518,33 @@
                         </th>
                         <th
                           scope="col"
-                          class="py-3.5 pl-0 pr-3 text-left text-sm font-semibold text-gray-900"
+                          class="py-3.5 px-3 text-left text-sm font-semibold text-gray-900"
                         >
-                          Broker ID
+                          Vehicle Name
                         </th>
                         <th
                           scope="col"
                           class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                         >
-                          Broker name
+                          Make
                         </th>
                         <th
                           scope="col"
                           class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                         >
-                          Phone
+                          Modal
                         </th>
                         <th
                           scope="col"
                           class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                         >
-                          Patients
+                          Vehicle Identification
                         </th>
                         <th
                           scope="col"
                           class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                         >
-                          Providers
+                          Status
                         </th>
                         <th
                           scope="col"
@@ -562,11 +562,6 @@
                           <input type="checkbox" class="h-4 w-4 rounded-sm" />
                         </td>
                         <td
-                          class="font-semibold whitespace-nowrap py-4 pl-0 pr-3 text-sm font-medium text-gray-900"
-                        >
-                          DR1235NP
-                        </td>
-                        <td
                           class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                         >
                           <div class="flex items-center space-x-4">
@@ -578,25 +573,30 @@
                               />
                             </div>
                             <div>
-                              <p class="font-semibold text-lg">Amir Mehmood</p>
-                              <p>info@gmail.com</p>
+                              <p class="font-semibold text-lg">Honda Civic</p>
+                              <!-- <p>info@gmail.com</p> -->
                             </div>
                           </div>
                         </td>
                         <td
                           class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                         >
-                          +92 308 9135843
+                          Honda
                         </td>
                         <td
                           class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                         >
-                          26
+                          2023
                         </td>
                         <td
                           class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                         >
-                          26
+                          262023DD
+                        </td>
+                        <td
+                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                        >
+                          <button class="px-3 py-1 font-semibold" style="background-color:#E8FCE7 ; color:#4BB543">Active</button>
                         </td>
                         <td
                           class="relative whitespace-nowrap py-4 pl-3 pr-4 text-center text-sm font-medium sm:pr-6 lg:pr-8"
@@ -604,25 +604,6 @@
                           <div
                             class="flex justify-center items-center space-x-2"
                           >
-                            <a
-                              href="#"
-                              class="bg-red-500 flex p-1 rounded-full text-white"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                                />
-                              </svg>
-                            </a>
                             <a
                               href="#"
                               class="bg-blue-500 flex p-1 rounded-full text-white"
@@ -657,11 +638,6 @@
                           <input type="checkbox" class="h-4 w-4 rounded-sm" />
                         </td>
                         <td
-                          class="font-semibold whitespace-nowrap py-4 pl-0 pr-3 text-sm font-medium text-gray-900"
-                        >
-                          DR1235NP
-                        </td>
-                        <td
                           class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                         >
                           <div class="flex items-center space-x-4">
@@ -673,25 +649,30 @@
                               />
                             </div>
                             <div>
-                              <p class="font-semibold text-lg">Amir Mehmood</p>
-                              <p>info@gmail.com</p>
+                              <p class="font-semibold text-lg">Honda Civic</p>
+                              <!-- <p>info@gmail.com</p> -->
                             </div>
                           </div>
                         </td>
                         <td
                           class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                         >
-                          +92 308 9135843
+                          Honda
                         </td>
                         <td
                           class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                         >
-                          26
+                          2023
                         </td>
                         <td
                           class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                         >
-                          26
+                          262023DD
+                        </td>
+                        <td
+                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                        >
+                          <button class="px-3 py-1 font-semibold" style="background-color: #F9EDBD; color:#FFCC02">Pending</button>
                         </td>
                         <td
                           class="relative whitespace-nowrap py-4 pl-3 pr-4 text-center text-sm font-medium sm:pr-6 lg:pr-8"
@@ -699,215 +680,6 @@
                           <div
                             class="flex justify-center items-center space-x-2"
                           >
-                            <a
-                              href="#"
-                              class="bg-red-500 flex p-1 rounded-full text-white"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                                />
-                              </svg>
-                            </a>
-                            <a
-                              href="#"
-                              class="bg-blue-500 flex p-1 rounded-full text-white"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                />
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="whitespace-nowrap py-4 pl-4 text-sm font-medium text-gray-900"
-                        >
-                          <input type="checkbox" class="h-4 w-4 rounded-sm" />
-                        </td>
-                        <td
-                          class="font-semibold whitespace-nowrap py-4 pl-0 pr-3 text-sm font-medium text-gray-900"
-                        >
-                          DR1235NP
-                        </td>
-                        <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                        >
-                          <div class="flex items-center space-x-4">
-                            <div class="h-10 w-10 rounded-full border">
-                              <img
-                                src="../../assets/Ellipse 137@2x.png"
-                                alt=""
-                                class="w-full rounded-full"
-                              />
-                            </div>
-                            <div>
-                              <p class="font-semibold text-lg">Amir Mehmood</p>
-                              <p>info@gmail.com</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                        >
-                          +92 308 9135843
-                        </td>
-                        <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                        >
-                          26
-                        </td>
-                        <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                        >
-                          26
-                        </td>
-                        <td
-                          class="relative whitespace-nowrap py-4 pl-3 pr-4 text-center text-sm font-medium sm:pr-6 lg:pr-8"
-                        >
-                          <div
-                            class="flex justify-center items-center space-x-2"
-                          >
-                            <a
-                              href="#"
-                              class="bg-red-500 flex p-1 rounded-full text-white"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                                />
-                              </svg>
-                            </a>
-                            <a
-                              href="#"
-                              class="bg-blue-500 flex p-1 rounded-full text-white"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                                />
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                                />
-                              </svg>
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="whitespace-nowrap py-4 pl-4 text-sm font-medium text-gray-900"
-                        >
-                          <input type="checkbox" class="h-4 w-4 rounded-sm" />
-                        </td>
-                        <td
-                          class="font-semibold whitespace-nowrap py-4 pl-0 pr-3 text-sm font-medium text-gray-900"
-                        >
-                          DR1235NP
-                        </td>
-                        <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                        >
-                          <div class="flex items-center space-x-4">
-                            <div class="h-10 w-10 rounded-full border">
-                              <img
-                                src="../../assets/Ellipse 137@2x.png"
-                                alt=""
-                                class="w-full rounded-full"
-                              />
-                            </div>
-                            <div>
-                              <p class="font-semibold text-lg">Amir Mehmood</p>
-                              <p>info@gmail.com</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                        >
-                          +92 308 9135843
-                        </td>
-                        <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                        >
-                          26
-                        </td>
-                        <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                        >
-                          26
-                        </td>
-                        <td
-                          class="relative whitespace-nowrap py-4 pl-3 pr-4 text-center text-sm font-medium sm:pr-6 lg:pr-8"
-                        >
-                          <div
-                            class="flex justify-center items-center space-x-2"
-                          >
-                            <a
-                              href="#"
-                              class="bg-red-500 flex p-1 rounded-full text-white"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-4 w-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-                                />
-                              </svg>
-                            </a>
                             <a
                               href="#"
                               class="bg-blue-500 flex p-1 rounded-full text-white"
