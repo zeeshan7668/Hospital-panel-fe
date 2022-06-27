@@ -21,7 +21,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body style="overflow-y: hidden">
     <header
@@ -130,8 +129,8 @@
                 </a>
                 <div class="collapse" id="brokersCollapse">
                   <div class="sub-menu">
-                    <a href="../Broker/ActiveBroker.html">Active Broker</a>
-                    <a href="../Broker/PendingBroker.html">Pending Broker</a>
+                    <a href="ActiveBroker.html">Active Broker</a>
+                    <a href="PendingBroker.html">Pending Broker</a>
                   </div>
                 </div>
               </li>
@@ -237,7 +236,7 @@
                 </a>
                 <div class="collapse" id="patientCollapse">
                   <div class="sub-menu">
-                    <a href="../Patient/PendingPatient.html">Active Patients</a>
+                    <a href="../Patient/ActivePatient.html">Active Patients</a>
                     <a href="../Patient/PendingPatient.html"
                       >Pending Patients</a
                     >
@@ -401,7 +400,7 @@
                   </div>
                 </div>
               </li>
-              <li class="nav__li navContainerActive">
+              <li class="nav__li">
                 <a
                   class="nav__a collapsed"
                   data-bs-toggle="collapse"
@@ -429,10 +428,45 @@
                 </a>
                 <div class="collapse" id="packagesCollapse">
                   <div class="sub-menu">
-                    <a href="AllPackege.html">All Packages</a>
-                    <a href="CreatePackege.html" class="active-sb-tab"
-                      >Create Packages</a
+                    <a href="../Packege/AllPackege.html">All Packages</a>
+                    <a href="../Packege/CreatePackege.html">Create Packages</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav__li navContainerActive">
+                <a
+                  class="nav__a collapsed"
+                  data-bs-toggle="collapse"
+                  href="#packagesCollapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="packagesCollapse"
+                >
+                  <span class="nav__a__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="29.622"
+                      height="31.64"
+                      viewBox="0 0 29.622 31.64"
                     >
+                      <path
+                        id="packing"
+                        d="M14.345,19.927,4.4,14.711,1.836,17.767c3.6,1.9,6.927,3.7,10.521,5.6l1.988-3.422ZM17.607,0V5.521h2.575a1.071,1.071,0,0,1,.919.43c.479.721-.178,1.434-.631,1.934-1.287,1.419-4.213,4.583-4.851,5.33a1.053,1.053,0,0,1-1.653,0c-.659-.772-3.747-4.084-4.975-5.467-.425-.479-.953-1.133-.515-1.8a1.071,1.071,0,0,1,.917-.43h2.575V0ZM9.11,11.932l-4.032,2,9.911,5.209,9.929-5.219-4.259-2.214.7-.772,3.862,1.993,2.8-2.632L23.769,7.982a3.239,3.239,0,0,0,.319-1.03L29.4,9.759a.348.348,0,0,1,.093.072.379.379,0,0,1,0,.536l-3.412,3.347,3.3,3.955a.384.384,0,0,1-.046.538.641.641,0,0,1-.077.049l-2.974,1.571v5.891a.384.384,0,0,1-.234.353L15.326,31.515a.381.381,0,0,1-.623-.085L3.955,26.058a.381.381,0,0,1-.209-.34v-5.85L.721,18.282a.641.641,0,0,1-.077-.049A.384.384,0,0,1,.6,17.695l3.219-3.862L.08,10.3a.384.384,0,0,1,.036-.546A.466.466,0,0,1,.19,9.7L5.582,6.654a3.862,3.862,0,0,0,.234,1.089L1.452,10.225,4.5,13.058l3.886-1.923.734.8Zm16.521,2.817-9.924,5.207,1.934,3.43,10.441-5.665Z"
+                        transform="translate(0.017)"
+                        fill="#707070"
+                      />
+                    </svg>
+                  </span>
+                  <span class="nav__a__text">Traning</span>
+                </a>
+                <div class="collapse" id="packagesCollapse">
+                  <div class="sub-menu">
+                    <a href="TraningList.html">Traning List</a>
+                    <a href="AddTraning.html" class="active-sb-tab"
+                      >Add Traning</a
+                    >
+                    <a href="TraningQuestion.html">Traning Questions</a>
+                    <a href="nav__a__icon.html">Add Questions</a>
                   </div>
                 </div>
               </li>
@@ -475,8 +509,8 @@
       </div>
       <!-- End Side Bar -->
       <div class="bg-gray-100 w-[80%] px-4 py-8 height-custom">
-        <p class="text-[#168EEA] bold text-2xl pb-4">Create Package</p>
-        <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md py-6">
+        <p class="text-[#168EEA] bold text-2xl pb-4">Add Traning</p>
+        <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md">
           <div class="grid grid-cols-2 gap-4">
             <div class="col-span-1">
               <div>
