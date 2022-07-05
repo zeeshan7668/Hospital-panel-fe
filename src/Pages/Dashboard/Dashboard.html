@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="../../../dist/output.css" rel="stylesheet" />
+    <!-- Donut chart -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100"
+    />
+    <!-- donut chart end -->
     <script src="../../js/sidebar.js"></script>
     <!-- Bootstrap style link -->
     <link
@@ -1030,11 +1036,157 @@
           </div>
         </dl>
 
-        <div class="grid grid-cols-2">
-          <div class="col-span-1"></div>
+        <div class="grid grid-cols-2 gap-2 mt-2">
+          <div class="col-span-1 border bg-white rounded-md shadow-md">
+            <div style="width: 100%">
+              <div class="chartjs-size-monitor">
+                <div class="chartjs-size-monitor-expand">
+                  <div class=""></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink">
+                  <div class=""></div>
+                </div>
+              </div>
+              <canvas
+                id="canvas"
+                style="display: block; width: 1379px; height: 689px"
+                width="1379"
+                height="689"
+                class="chartjs-render-monitor"
+              ></canvas>
+            </div>
+          </div>
+          <div class="col-span-1 border bg-white rounded-md shadow-md">
+            <div class="container-chart">
+              <div>
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Donut chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["M", "T", "W", "T", "F", "S", "S"],
+          datasets: [
+            {
+              backgroundColor: [
+                "#2ecc71",
+                "#3498db",
+                "#95a5a6",
+                "#9b59b6",
+                "#f1c40f",
+                "#e74c3c",
+                "#34495e",
+              ],
+              data: [12, 19, 3, 17, 28, 24, 7],
+            },
+          ],
+        },
+      });
+    </script>
+    <!-- Line Chart -->
+    <script src="https://cdn2.hubspot.net/hubfs/476360/Chart.js"></script>
+    <script src="https://cdn2.hubspot.net/hubfs/476360/utils.js"></script>
+    <script>
+      var config = {
+        type: "line",
+        data: {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+          ],
+          datasets: [
+            {
+              label: "APAC RE Index",
+              backgroundColor: window.chartColors.red,
+              borderColor: window.chartColors.red,
+              fill: false,
+              data: [
+                10, 20, 30, 40, 100, 50, 150,
+                /*randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor(),
+					randomScalingFactor()*/
+              ],
+            },
+            {
+              label: "APAC PME",
+              backgroundColor: window.chartColors.blue,
+              borderColor: window.chartColors.blue,
+              fill: false,
+              data: [50, 300, 100, 450, 150, 200, 300],
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: "Chart.js Line Chart - Logarithmic",
+          },
+          scales: {
+            xAxes: [
+              {
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: "Date",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                display: true,
+                //type: 'logarithmic',
+                scaleLabel: {
+                  display: true,
+                  labelString: "Index Returns",
+                },
+                ticks: {
+                  min: 0,
+                  max: 500,
+
+                  // forces step size to be 5 units
+                  stepSize: 100,
+                },
+              },
+            ],
+          },
+        },
+      };
+
+      window.onload = function () {
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myLine = new Chart(ctx, config);
+      };
+
+      document
+        .getElementById("randomizeData")
+        .addEventListener("click", function () {
+          config.data.datasets.forEach(function (dataset) {
+            dataset.data = dataset.data.map(function () {
+              return randomScalingFactor();
+            });
+          });
+
+          window.myLine.update();
+        });
+    </script>
     <!-- Bootstrap script link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
