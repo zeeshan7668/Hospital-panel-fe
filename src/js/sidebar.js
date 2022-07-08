@@ -1,3 +1,4 @@
+// ============ Side Bar ===============//
 $(document).ready(function () {
   $(".sidebar-menu > li.have-children a").on("click", function (i) {
     i.preventDefault();
@@ -13,4 +14,12 @@ $(document).ready(function () {
   });
 });
 
-// Donut Chart
+// ==================  End Side bar =============
+
+// =============== Toogle side bar =============================
+
+function toggleSidebar(isOpen) {
+  if (isOpen === true) {
+    document.getElementById("sidebar").classList.toggle("toggle-sidebar");
+  }
+}

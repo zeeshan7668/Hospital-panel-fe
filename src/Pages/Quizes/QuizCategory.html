@@ -25,7 +25,7 @@
   </head>
   <body style="overflow-y: hidden">
     <header
-      class="h-16 shadow-lg border-b flex justify-between items-center px-8 sticky"
+      class="h-16 shadow-sm border-b flex justify-between items-center px-8 sticky"
     >
       <div class="h-16 w-16 flex justify-center items-center ml-10">
         <img src="../../assets/C navigator-02@2x.png" alt="" class="w-full" />
@@ -51,7 +51,7 @@
           alt="avatar"
         />
         <button
-          class="text-[#EA3535] bg-[#FCE1E1] flex items-center space-x-2 py-1 px-3 rounded-sm text-sm font-medium"
+          class="text-[#EA3535] bg-[#FCE1E1] hover:bg-[#EA3535] hover:text-white hover:bg-[#EA3535] hover:text-white flex items-center space-x-2 py-1 px-3 rounded-md text-sm font-medium"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -434,7 +434,7 @@
                   </div>
                 </div>
               </li>
-              <li class="nav__li ">
+              <li class="nav__li">
                 <a
                   class="nav__a collapsed"
                   data-bs-toggle="collapse"
@@ -462,9 +462,7 @@
                 </a>
                 <div class="collapse" id="traningCollapse">
                   <div class="sub-menu">
-                    <a href="TraningList.html" 
-                      >Traning List</a
-                    >
+                    <a href="TraningList.html">Traning List</a>
                     <a href="AddTraning.html">Add Traning</a>
                     <a href="TraningQuestion.html">Traning Questions</a>
                     <a href="nav__a__icon.html">Add Questions</a>
@@ -500,12 +498,18 @@
                 </a>
                 <div class="collapse" id="quizCollapse">
                   <div class="sub-menu">
-                    <a href="../Quizes/QuizList.html" >Quizes List</a>
-                    <a href="../Quizes/AddQuiz.html" >Add Quiz</a>
+                    <a href="../Quizes/QuizList.html">Quizes List</a>
+                    <a href="../Quizes/AddQuiz.html">Add Quiz</a>
                     <a href="../Quizes/QuizCategory.html">Quiz Category</a>
-                    <a href="../Quizes/AddQuizCategory.html" class="active-sb-tab">Add Quiz Category</a>
-                    <a href="../Quizes/QuizQuestion.html" >Quiz Question</a>
-                    <a href="../Quizes/AddQuizQuestion.html" >Add Quiz Question</a>
+                    <a
+                      href="../Quizes/AddQuizCategory.html"
+                      class="active-sb-tab"
+                      >Add Quiz Category</a
+                    >
+                    <a href="../Quizes/QuizQuestion.html">Quiz Question</a>
+                    <a href="../Quizes/AddQuizQuestion.html"
+                      >Add Quiz Question</a
+                    >
                   </div>
                 </div>
               </li>
@@ -538,12 +542,15 @@
                 </a>
                 <div class="collapse" id="settingsCollapse">
                   <div class="sub-menu">
-                    <a href="../Setting/ProfileSetting.html">Profile Settings</a>
-                    <a href="../Setting/PasswordSetting.html">Password Settings</a>
+                    <a href="../Setting/ProfileSetting.html"
+                      >Profile Settings</a
+                    >
+                    <a href="../Setting/PasswordSetting.html"
+                      >Password Settings</a
+                    >
                   </div>
                 </div>
               </li>
-              
             </ul>
           </nav>
         </aside>
@@ -551,341 +558,342 @@
       <!-- End Side Bar -->
       <div class="bg-gray-100 w-[80%] px-4 py-8 height-custom">
         <div class="flex justify-between items-center pb-2">
-            <p class="text-[#168EEA] bold text-2xl pb-4">Quizes</p>
-            <a href="AddTraning.html"
-              class="flex items-center space-x-1 bg-[#168EEA] text-white px-4 py-2 rounded-md"
+          <p class="text-[#168EEA] font-bold text-2xl pb-4">Quizes</p>
+          <a
+            href="AddTraning.html"
+            class="flex items-center space-x-1 bg-[#168EEA] text-white px-4 py-2 rounded-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="#fff"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="{2}"
             >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+              />
+            </svg>
+            <span>Add</span>
+          </a>
+        </div>
+        <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md">
+          <div class="sm:flex sm:items-center border-b py-8">
+            <div class="sm:flex-auto">
+              <input
+                type="date"
+                class="px-2 py-1.5 border rounded-md shadow-sm"
+              />
+              <span class="relative z-0 inline-flex shadow-sm rounded-md">
+                <span
+                  class="relative inline-flex items-center px-2 py-1.5 rounded-l-md border border-gray-300 bg-white text-[#003333] font-medium"
+                >
+                  Status
+                </span>
+                <label for="message-type" class="sr-only"
+                  >Select message type</label
+                >
+                <select
+                  id="message-type"
+                  name="message-type"
+                  class="-ml-px block w-full pl-3 pr-9 py-1.5 rounded-l-none rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                >
+                  <option>All</option>
+                </select>
+              </span>
+            </div>
+            <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none relative">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="#fff"
+                class="h-5 w-5 absolute top-1/2 -translate-y-1/2 text-gray-400 left-4"
+                fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                strokeWidth="{2}"
+                stroke-width="2"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
-              <span>Add</span>
-            </a>
+              <input
+                type="text"
+                placeholder="search"
+                class="bg-gray-100 pl-12 pr-4 py-1.5 rounded-full"
+              />
+            </div>
           </div>
-          <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md">
-            <div class="sm:flex sm:items-center border-b py-8">
-              <div class="sm:flex-auto">
-                <input
-                  type="date"
-                  class="px-2 py-1.5 border rounded-md shadow-sm"
-                />
-                <span class="relative z-0 inline-flex shadow-sm rounded-md">
-                  <span
-                    class="relative inline-flex items-center px-2 py-1.5 rounded-l-md border border-gray-300 bg-white text-[#003333] font-medium"
-                  >
-                    Status
-                  </span>
-                  <label for="message-type" class="sr-only"
-                    >Select message type</label
-                  >
-                  <select
-                    id="message-type"
-                    name="message-type"
-                    class="-ml-px block w-full pl-3 pr-9 py-1.5 rounded-l-none rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                  >
-                    <option>All</option>
-                  </select>
-                </span>
-              </div>
-              <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none relative">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 absolute top-1/2 -translate-y-1/2 text-gray-400 left-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
+          <div class="mt-8 flex flex-col">
+            <div class="overflow-x-auto">
+              <div class="inline-block min-w-full py-2 align-middle">
+                <div
+                  class="overflow-hidden shadow-sm ring-1 ring-black ring-opacity-5"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-                <input
-                  type="text"
-                  placeholder="search"
-                  class="bg-gray-100 pl-12 pr-4 py-1.5 rounded-full"
-                />
-              </div>
-            </div>
-            <div class="mt-8 flex flex-col">
-              <div class="overflow-x-auto">
-                <div class="inline-block min-w-full py-2 align-middle">
-                  <div
-                    class="overflow-hidden shadow-sm ring-1 ring-black ring-opacity-5"
-                  >
-                    <table class="min-w-full divide-y divide-gray-300">
-                      <thead class="bg-gray-50">
-                        <tr>
-                          <th
-                            scope="col"
-                            class="py-3.5 pl-4 text-left text-sm font-semibold text-gray-900"
+                  <table class="min-w-full divide-y divide-gray-300">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th
+                          scope="col"
+                          class="py-3.5 pl-4 text-left text-sm font-semibold text-gray-900"
+                        >
+                          <input
+                            type="checkbox"
+                            name=""
+                            id=""
+                            class="h-4 w-4"
+                          />
+                        </th>
+                        <th
+                          scope="col"
+                          class="py-3.5 pl-0 pr-3 text-left text-sm font-semibold text-gray-900"
+                        >
+                          Title
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                        >
+                          Description
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                        >
+                          Images
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                        >
+                          Files
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                        >
+                          Status
+                        </th>
+                        <th
+                          scope="col"
+                          class="relative py-3.5 pl-3 pr-4 sm:pr-6 lg:pr-8"
+                        >
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 bg-white">
+                      <tr>
+                        <td
+                          class="whitespace-nowrap py-4 pl-4 text-sm font-medium text-gray-900"
+                        >
+                          <input type="checkbox" class="h-4 w-4 rounded-sm" />
+                        </td>
+                        <td
+                          class="font-normal whitespace-nowrap py-4 pl-0 pr-3 text-sm font-medium text-gray-900"
+                        >
+                          Lincoln Country
+                        </td>
+                        <td
+                          class="font-normal whitespace-nowrap py-4 pl-0 pr-3 text-sm font-medium text-gray-900"
+                        >
+                          Lincoln Country Country Country
+                        </td>
+                        <td
+                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                        >
+                          <div class="flex items-center space-x-4">
+                            <div class="h-10 w-10 rounded-full border">
+                              <img
+                                src="../../assets/Ellipse 137@2x.png"
+                                alt=""
+                                class="w-full rounded-full"
+                              />
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                        >
+                          Lincoln.pdf
+                        </td>
+                        <td
+                          class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                        >
+                          <button
+                            class="bg-green-50 text-green-700 px-4 py-2 rounded-sm"
                           >
-                            <input
-                              type="checkbox"
-                              name=""
-                              id=""
-                              class="h-4 w-4"
-                            />
-                          </th>
-                          <th
-                            scope="col"
-                            class="py-3.5 pl-0 pr-3 text-left text-sm font-semibold text-gray-900"
+                            Active
+                          </button>
+                        </td>
+                        <td
+                          class="relative whitespace-nowrap py-4 pl-3 pr-4 text-center text-sm font-medium sm:pr-6 lg:pr-8"
+                        >
+                          <div
+                            class="flex justify-center items-center space-x-2"
                           >
-                            Title
-                          </th>
-                          <th
-                            scope="col"
-                            class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Description
-                          </th>
-                          <th
-                            scope="col"
-                            class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Images
-                          </th>
-                          <th
-                            scope="col"
-                            class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Files
-                          </th>
-                          <th
-                            scope="col"
-                            class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                          >
-                            Status
-                          </th>
-                          <th
-                            scope="col"
-                            class="relative py-3.5 pl-3 pr-4 sm:pr-6 lg:pr-8"
-                          >
-                            Actions
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="divide-y divide-gray-200 bg-white">
-                        <tr>
-                          <td
-                            class="whitespace-nowrap py-4 pl-4 text-sm font-medium text-gray-900"
-                          >
-                            <input type="checkbox" class="h-4 w-4 rounded-sm" />
-                          </td>
-                          <td
-                            class="font-normal whitespace-nowrap py-4 pl-0 pr-3 text-sm font-medium text-gray-900"
-                          >
-                            Lincoln Country
-                          </td>
-                          <td
-                            class="font-normal whitespace-nowrap py-4 pl-0 pr-3 text-sm font-medium text-gray-900"
-                          >
-                            Lincoln Country Country Country
-                          </td>
-                          <td
-                            class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                          >
-                            <div class="flex items-center space-x-4">
-                              <div class="h-10 w-10 rounded-full border">
-                                <img
-                                  src="../../assets/Ellipse 137@2x.png"
-                                  alt=""
-                                  class="w-full rounded-full"
+                            <a
+                              href="#"
+                              style="background-color: #ffbb00"
+                              class="flex p-1 rounded-full text-white"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
                                 />
-                              </div>
-                            </div>
-                          </td>
-                          <td
-                            class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                          >
-                            Lincoln.pdf
-                          </td>
-                          <td
-                            class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-                          >
+                              </svg>
+                            </a>
+                            <a
+                              href="#"
+                              class="bg-gray-900 flex p-1 rounded-full text-white"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                />
+                              </svg>
+                            </a>
                             <button
-                              class="bg-green-50 text-green-700 px-4 py-2 rounded-sm"
+                              class="bg-[#168EEA] text-white px-3 py-1 rounded-sm"
                             >
-                              Active
+                              Manage Questions
                             </button>
-                          </td>
-                          <td
-                            class="relative whitespace-nowrap py-4 pl-3 pr-4 text-center text-sm font-medium sm:pr-6 lg:pr-8"
-                          >
-                            <div
-                              class="flex justify-center items-center space-x-2"
-                            >
-                              <a
-                                href="#"
-                                style="background-color: #ffbb00"
-                                class="flex p-1 rounded-full text-white"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  class="h-4 w-4"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                                  />
-                                </svg>
-                              </a>
-                              <a
-                                href="#"
-                                class="bg-gray-900 flex p-1 rounded-full text-white"
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  class="h-4 w-4"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                                  />
-                                </svg>
-                              </a>
-                              <button
-                                class="bg-[#168EEA] text-white px-3 py-1 rounded-sm"
-                              >
-                                Manage Questions
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-  
-                        <!-- More people... -->
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Pagination -->
-            <div class="bg-white py-3 flex items-center justify-between">
-              <div class="flex-1 flex items-center justify-between w-full">
-                <div>
-                  <p class="text-sm text-gray-700">
-                    Displaying
-                    <span class="font-medium">25</span>
-                    out of
-                    <span class="font-medium">150</span>
-                  </p>
-                </div>
-                <div>
-                  <nav
-                    class="relative z-0 inline-flex rounded-md space-x-2 py-1"
-                    aria-label="Pagination"
-                  >
-                    <a
-                      href="#"
-                      class="rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                    >
-                      <span class="sr-only">Previous</span>
-                      <!-- Heroicon name: solid/chevron-left -->
-                      <svg
-                        class="h-5 w-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                    <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
-                    <a
-                      href="#"
-                      aria-current="page"
-                      class="rounded-full z-10 bg-[#168EEA] border-[#168EEA] text-white relative inline-flex items-center px-3 py-1 border text-sm font-medium"
-                    >
-                      1
-                    </a>
-                    <a
-                      href="#"
-                      class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
-                    >
-                      2
-                    </a>
-                    <a
-                      href="#"
-                      class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-3 py-1 border text-sm font-medium"
-                    >
-                      3
-                    </a>
-                    <span
-                      class="rounded-full relative inline-flex items-center px-3 py-1 border border-gray-300 bg-white text-sm font-medium text-gray-700"
-                    >
-                      ...
-                    </span>
-                    <a
-                      href="#"
-                      class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-3 py-1 border text-sm font-medium"
-                    >
-                      8
-                    </a>
-                    <a
-                      href="#"
-                      class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
-                    >
-                      9
-                    </a>
-                    <a
-                      href="#"
-                      class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
-                    >
-                      10
-                    </a>
-                    <a
-                      href="#"
-                      class="rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                    >
-                      <span class="sr-only">Next</span>
-                      <!-- Heroicon name: solid/chevron-right -->
-                      <svg
-                        class="h-5 w-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  </nav>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <!-- More people... -->
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Pagination -->
+          <div class="bg-white py-3 flex items-center justify-between">
+            <div class="flex-1 flex items-center justify-between w-full">
+              <div>
+                <p class="text-sm text-gray-700">
+                  Displaying
+                  <span class="font-medium">25</span>
+                  out of
+                  <span class="font-medium">150</span>
+                </p>
+              </div>
+              <div>
+                <nav
+                  class="relative z-0 inline-flex rounded-md space-x-2 py-1"
+                  aria-label="Pagination"
+                >
+                  <a
+                    href="#"
+                    class="rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                  >
+                    <span class="sr-only">Previous</span>
+                    <!-- Heroicon name: solid/chevron-left -->
+                    <svg
+                      class="h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                  <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                  <a
+                    href="#"
+                    aria-current="page"
+                    class="rounded-full z-10 bg-[#168EEA] border-[#168EEA] text-white relative inline-flex items-center px-3 py-1 border text-sm font-medium"
+                  >
+                    1
+                  </a>
+                  <a
+                    href="#"
+                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
+                  >
+                    2
+                  </a>
+                  <a
+                    href="#"
+                    class="rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-3 py-1 border text-sm font-medium"
+                  >
+                    3
+                  </a>
+                  <span
+                    class="rounded-full relative inline-flex items-center px-3 py-1 border border-gray-300 bg-white text-sm font-medium text-gray-700"
+                  >
+                    ...
+                  </span>
+                  <a
+                    href="#"
+                    class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-3 py-1 border text-sm font-medium"
+                  >
+                    8
+                  </a>
+                  <a
+                    href="#"
+                    class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
+                  >
+                    9
+                  </a>
+                  <a
+                    href="#"
+                    class="no-underline rounded-full bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-3 py-1 border text-sm font-medium"
+                  >
+                    10
+                  </a>
+                  <a
+                    href="#"
+                    class="rounded-full relative inline-flex items-center px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                  >
+                    <span class="sr-only">Next</span>
+                    <!-- Heroicon name: solid/chevron-right -->
+                    <svg
+                      class="h-5 w-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Bootstrap script link -->

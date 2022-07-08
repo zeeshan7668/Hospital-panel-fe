@@ -25,7 +25,7 @@
   </head>
   <body style="overflow-y: hidden">
     <header
-      class="h-16 shadow-lg border-b flex justify-between items-center px-8 sticky"
+      class="h-16 shadow-sm border-b flex justify-between items-center px-8 sticky"
     >
       <div class="h-16 w-16 flex justify-center items-center ml-10">
         <img src="../../assets/C navigator-02@2x.png" alt="" class="w-full" />
@@ -51,7 +51,7 @@
           alt="avatar"
         />
         <button
-          class="text-[#EA3535] bg-[#FCE1E1] flex items-center space-x-2 py-1 px-3 rounded-sm text-sm font-medium"
+          class="text-[#EA3535] bg-[#FCE1E1] hover:bg-[#EA3535] hover:text-white hover:bg-[#EA3535] hover:text-white flex items-center space-x-2 py-1 px-3 rounded-md text-sm font-medium"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -462,12 +462,12 @@
                 </a>
                 <div class="collapse" id="traningCollapse">
                   <div class="sub-menu">
-                    <a href="TraningList.html" 
-                      >Traning List</a
-                    >
-                    <a href="AddTraning.html" >Add Traning</a>
+                    <a href="TraningList.html">Traning List</a>
+                    <a href="AddTraning.html">Add Traning</a>
                     <a href="TraningQuestion.html">Traning Questions</a>
-                    <a href="AddQuesion.html" class="active-sb-tab">Add Questions</a>
+                    <a href="AddQuesion.html" class="active-sb-tab"
+                      >Add Questions</a
+                    >
                   </div>
                 </div>
               </li>
@@ -510,9 +510,9 @@
       </div>
       <!-- End Side Bar -->
       <div class="bg-gray-100 w-[80%] px-4 py-8 height-custom">
-        <p class="text-[#168EEA] bold text-2xl pb-4">Add Question</p>
+        <p class="text-[#168EEA] font-bold text-2xl pb-4">Add Question</p>
         <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md">
-          <div class="grid grid-cols-2 gap-4 p-6  ">
+          <div class="grid grid-cols-2 gap-4 p-6">
             <div class="col-span-1">
               <div>
                 <label
@@ -521,9 +521,13 @@
                   >Select Traning:</label
                 >
                 <div class="mt-1">
-                    <select name="" id="" class="bg-gray-100 py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-                        <option value="1">Option 1</option>
-                    </select>
+                  <select
+                    name=""
+                    id=""
+                    class="bg-gray-100 py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  >
+                    <option value="1">Option 1</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -609,24 +613,26 @@
             </div>
             <div class="col-span-2">
               <div class="flex items-center space-x-8">
-                <p class="text-[#707070] font-medium">Mark the Correct Option:</p>
+                <p class="text-[#707070] font-medium">
+                  Mark the Correct Option:
+                </p>
                 <div class="flex space-x-2 items-center">
-                    <input type="radio" name="" id="">
-                    <label for="" class="text-sm text-[#707070]">Option 1</label>
-                    <input type="radio" name="" id="">
-                    <label for="" class="text-sm text-[#707070]">Option 2</label>
-                    <input type="radio" name="" id="">
-                    <label for="" class="text-sm text-[#707070]">Option 3</label>
-                    <input type="radio" name="" id="">
-                    <label for="" class="text-sm text-[#707070]">Option 4</label>
+                  <input type="radio" name="" id="" />
+                  <label for="" class="text-sm text-[#707070]">Option 1</label>
+                  <input type="radio" name="" id="" />
+                  <label for="" class="text-sm text-[#707070]">Option 2</label>
+                  <input type="radio" name="" id="" />
+                  <label for="" class="text-sm text-[#707070]">Option 3</label>
+                  <input type="radio" name="" id="" />
+                  <label for="" class="text-sm text-[#707070]">Option 4</label>
                 </div>
-            </div>
+              </div>
             </div>
             <div class="col-span-2">
               <div class="space-x-4">
                 <button
                   type="button"
-                  class="inline-flex items-center px-4 py-2 border border-[#168EEA] text-sm font-medium rounded-md shadow-sm text-[#168EEA] bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  class="inline-flex items-center px-4 py-2 border-1 border-[#168EEA] text-sm font-medium rounded-md shadow-sm text-[#168EEA] bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Cancel
                 </button>

@@ -25,7 +25,7 @@
   </head>
   <body style="overflow-y: hidden">
     <header
-      class="h-16 shadow-lg border-b flex justify-between items-center px-8 sticky"
+      class="h-16 shadow-sm border-b flex justify-between items-center px-8 sticky"
     >
       <div class="h-16 w-16 flex justify-center items-center ml-10">
         <img src="../../assets/C navigator-02@2x.png" alt="" class="w-full" />
@@ -51,7 +51,7 @@
           alt="avatar"
         />
         <button
-          class="text-[#EA3535] bg-[#FCE1E1] flex items-center space-x-2 py-1 px-3 rounded-sm text-sm font-medium"
+          class="text-[#EA3535] bg-[#FCE1E1] hover:bg-[#EA3535] hover:text-white hover:bg-[#EA3535] hover:text-white flex items-center space-x-2 py-1 px-3 rounded-md text-sm font-medium"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -434,7 +434,7 @@
                   </div>
                 </div>
               </li>
-              <li class="nav__li ">
+              <li class="nav__li">
                 <a
                   class="nav__a collapsed"
                   data-bs-toggle="collapse"
@@ -462,9 +462,7 @@
                 </a>
                 <div class="collapse" id="traningCollapse">
                   <div class="sub-menu">
-                    <a href="TraningList.html" 
-                      >Traning List</a
-                    >
+                    <a href="TraningList.html">Traning List</a>
                     <a href="AddTraning.html">Add Traning</a>
                     <a href="TraningQuestion.html">Traning Questions</a>
                     <a href="nav__a__icon.html">Add Questions</a>
@@ -500,12 +498,18 @@
                 </a>
                 <div class="collapse" id="quizCollapse">
                   <div class="sub-menu">
-                    <a href="../Quizes/QuizList.html" >Quizes List</a>
-                    <a href="../Quizes/AddQuiz.html" >Add Quiz</a>
-                    <a href="../Quizes/QuizCategory.html" >Quiz Category</a>
-                    <a href="../Quizes/AddQuizCategory.html" class="active-sb-tab">Add Quiz Category</a>
+                    <a href="../Quizes/QuizList.html">Quizes List</a>
+                    <a href="../Quizes/AddQuiz.html">Add Quiz</a>
+                    <a href="../Quizes/QuizCategory.html">Quiz Category</a>
+                    <a
+                      href="../Quizes/AddQuizCategory.html"
+                      class="active-sb-tab"
+                      >Add Quiz Category</a
+                    >
                     <a href="../Quizes/QuizQuestion.html">Quiz Question</a>
-                    <a href="../Quizes/AddQuizQuestion.html">Add Quiz Question</a>
+                    <a href="../Quizes/AddQuizQuestion.html"
+                      >Add Quiz Question</a
+                    >
                   </div>
                 </div>
               </li>
@@ -538,83 +542,92 @@
                 </a>
                 <div class="collapse" id="settingsCollapse">
                   <div class="sub-menu">
-                    <a href="../Setting/ProfileSetting.html">Profile Settings</a>
-                    <a href="../Setting/PasswordSetting.html">Password Settings</a>
+                    <a href="../Setting/ProfileSetting.html"
+                      >Profile Settings</a
+                    >
+                    <a href="../Setting/PasswordSetting.html"
+                      >Password Settings</a
+                    >
                   </div>
                 </div>
               </li>
-              
             </ul>
           </nav>
         </aside>
       </div>
       <!-- End Side Bar -->
       <div class="bg-gray-100 w-[80%] px-4 py-8 height-custom">
-          <p class="text-[#168EEA] bold text-2xl pb-4">Add Quiz Category</p>
-          <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md">
-            <div class="grid grid-cols-2 gap-4 p-6  ">
-              <div class="col-span-1">
-                <div>
-                  <label
-                    for="email"
-                    class="block text-sm font-noraml text-gray-500"
-                    >Title:</label
-                  >
-                  <div class="mt-1">
-                    <input
-                      type="text"
-                      class="bg-gray-100 py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col-span-1">
-                <div>
-                  <label
-                    for="email"
-                    class="block text-sm font-noraml text-gray-500"
-                    >Image</label
-                  >
-                  <div class="mt-1">
-                    <input
-                      type="file"
-                      class="bg-gray-100 py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      placeholder=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col-span-2">
-                <div>
-                  <label
-                    for="email"
-                    class="block text-sm font-noraml text-gray-500"
-                    >Description:</label
-                  >
-                  <div class="mt-1">
-                    <textarea name="" id="" cols="30" rows="4" class="bg-gray-100 py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="col-span-2">
-                <div class="space-x-4">
-                  <button
-                    type="button"
-                    class="inline-flex items-center px-4 py-2 border border-[#168EEA] text-sm font-medium rounded-md shadow-sm text-[#168EEA] bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="button"
-                    class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#168EEA] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    Save
-                  </button>
+        <p class="text-[#168EEA] font-bold text-2xl pb-4">Add Quiz Category</p>
+        <div class="px-4 sm:px-6 lg:px-8 bg-white shadow-md rounded-md">
+          <div class="grid grid-cols-2 gap-4 p-6">
+            <div class="col-span-1">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-noraml text-gray-500"
+                  >Title:</label
+                >
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    class="bg-gray-100 py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    placeholder=""
+                  />
                 </div>
               </div>
             </div>
+            <div class="col-span-1">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-noraml text-gray-500"
+                  >Image</label
+                >
+                <div class="mt-1">
+                  <input
+                    type="file"
+                    class="bg-gray-100 py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-noraml text-gray-500"
+                  >Description:</label
+                >
+                <div class="mt-1">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="4"
+                    class="bg-gray-100 py-2 px-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div class="space-x-4">
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 border-1 border-[#168EEA] text-sm font-medium rounded-md shadow-sm text-[#168EEA] bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#168EEA] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
     </div>
     <!-- Bootstrap script link -->

@@ -113,7 +113,7 @@ Add the correct font weight in Edge and Safari.
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: font-bolder;
 }
 
 /*
@@ -2025,9 +2025,16 @@ p {
   color: gray;
   font-size: 14px;
   font-weight: 500;
+  margin: 0.3rem 0;
 }
 .sub-menu .active-sb-tab {
   color: #168eea;
+}
+
+@media (max-width: 1023px) {
+  .toggle-sidebar {
+    margin-left: -300px !important;
+  }
 }
 /* ================================== End sidebar ======================= */
 
@@ -2122,4 +2129,103 @@ p {
   height: 200%;
   left: 0;
   top: 0;
+}
+
+/*============================== Data Table =======================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+table {
+  border-bottom: none !important;
+  color: #272d3b;
+}
+
+table.dataTable thead th {
+  border-bottom: none !important;
+  text-transform: uppercase;
+  text-align: left !important;
+}
+
+.odd,
+.even,
+.sorting_1 {
+  background-color: #ffffff !important;
+}
+
+.dataTables_length {
+  display: none !important;
+}
+
+.dataTables_info {
+  display: none !important;
+  padding: 2rem 0 !important;
+}
+
+.borderBottomTable {
+  padding: 40px 10px !important;
+  border-top: none !important;
+  border-bottom: 1px solid #00000029;
+}
+
+.dataTables_paginate {
+  padding: 2rem 0 !important;
+}
+
+.paginate_button {
+  border-radius: 100% !important;
+  background: #fff !important;
+}
+
+.paginate_button:hover {
+  background-color: #168eea !important;
+  color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  border: 1px solid rgb(207, 198, 198) !important;
+  background: #fff !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: #168eea !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+  background: white !important;
+  cursor: not-allowed !important;
+  border-radius: 2rem !important;
+}
+
+.next {
+  border-radius: 2rem !important;
+}
+.paging_simple_numbers .next {
+  border-radius: 2rem !important;
+}
+.paging_simple_numbers .previous {
+  border-radius: 2rem !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: #168eea !important;
+  color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  width: 100%;
+  border-bottom: 1px solid rgb(93, 93, 93) !important;
+  margin-bottom: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.dataTables_wrapper .dataTables_filter input {
+  min-width: 300px !important;
+  background-repeat: no-repeat !important;
+  padding: 0.6rem 0 !important;
+  padding-left: 4rem !important;
+  padding-right: 1rem !important;
+  background-position: 20px !important;
+  background-color: #edeff3 !important;
+  border-radius: 3rem !important;
+  border: 1px solid transparent !important;
+  background-image: url("../src/assets/search.svg");
+}
+.dataTables_wrapper .dataTables_filter input:focus {
+  outline: 0 !important;
 }
